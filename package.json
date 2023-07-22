@@ -1,0 +1,19 @@
+{
+  "name": "protector",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "axios": "^0.27.2",
+    "bottleneck": "^2.19.5",
+    "discord.js": "^14.2.0",
+    "dotenv": "^16.0.1",
+    "quick.db": "^9.0.6"
+  }
+}
