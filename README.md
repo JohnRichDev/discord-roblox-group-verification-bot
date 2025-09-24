@@ -1,4 +1,100 @@
-# Roblox Group Role Verification Discord Bot
+# Discord Roblox Group Verification Bot
+
+A modular Discord bot that verifies Roblox group membership and automatically assigns Discord roles based on group ranks and departments.
+
+## Features
+
+- **User Verification**: Connect Discord accounts to Roblox profiles through verification codes
+- **Automatic Role Assignment**: Assign Discord roles based on Roblox group membership and ranks
+- **Department Roles**: Special department roles for specific guilds
+- **Nickname Management**: Update Discord nicknames with rank prefixes
+- **Role Persistence**: Save and restore user roles when they leave and rejoin
+- **Admin Commands**: Manual user connection and role updates
+
+## Project Structure
+
+```
+├── index.js                 # Main bot file
+├── config.json             # Configuration file (customize here!)
+├── package.json            # Dependencies
+├── .env                    # Environment variables (TOKEN)
+└── src/
+    ├── utils.js            # Utility functions
+    ├── robloxService.js    # Roblox API service
+    ├── databaseService.js  # Database operations
+    ├── roleService.js      # Role management logic
+    ├── buttonHandler.js    # Button interaction handler
+    ├── commandHandler.js   # Main command router
+    └── commands/
+        ├── connect.js      # Connect command
+        ├── update.js       # Update roles command
+        ├── disconnect.js   # Disconnect command
+        ├── connection.js   # Check connection status
+        └── manualConnect.js # Admin manual connect
+```
+
+## Configuration
+
+All bot settings are centralized in `config.json`:
+
+### Bot Settings
+- `bot.activity`: Bot status activity
+- `bot.verification.timeout`: Verification timeout (ms)
+- `bot.verification.messageDeleteDelay`: Message auto-delete delay (ms)
+- `bot.verification.emojiAmount`: Number of verification emojis
+
+### Roblox Settings
+- `roblox.groupIds`: Array of monitored Roblox group IDs
+- `roblox.ranks`: Rank mappings with prefixes for each group
+
+### Discord Settings  
+- `discord.guilds`: Guild-specific configurations (department roles)
+- `discord.defaultRoles`: Roles to remove during updates
+- `discord.roleNames`: Verified/Unverified role names
+
+### Rate Limiting
+- `rateLimit`: Bottleneck configuration for Roblox API calls
+
+## Commands
+
+- `/connect <username>` - Connect your Discord to a Roblox account
+- `/update [user]` - Update roles based on current Roblox groups
+- `/disconnect` - Disconnect from Roblox account
+- `/connection` - Check connection status
+- `/manual_connect <user> <userid>` - (Admin) Manually connect users
+
+## Setup
+
+1. Clone the repository
+2. Install dependencies: `npm install`
+3. Create `.env` file with your bot token:
+   ```
+   TOKEN=your_discord_bot_token_here
+   ```
+4. Customize `config.json` with your server and group settings
+5. Run the bot: `node index.js`
+
+## Customization
+
+To customize the bot for your server:
+
+1. **Update Group IDs**: Modify `roblox.groupIds` in `config.json`
+2. **Configure Ranks**: Update `roblox.ranks` with your group rank mappings
+3. **Set Guild Settings**: Configure `discord.guilds` for your server ID
+4. **Department Roles**: Update department role mappings in guild config
+5. **Default Roles**: Modify `discord.defaultRoles` list as needed
+
+## Environment Variables
+
+- `TOKEN`: Discord bot token (required)
+
+## Dependencies
+
+- `discord.js`: Discord API wrapper
+- `axios`: HTTP client for Roblox API
+- `bottleneck`: Rate limiting
+- `quick.db`: Local database
+- `dotenv`: Environment variable management
 
 This Discord bot is used for Roblox group role verification. It allows users to connect their Roblox accounts to their Discord accounts and automatically assigns roles based on their group memberships in specific Roblox groups.
 
