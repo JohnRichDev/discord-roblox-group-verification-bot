@@ -1,0 +1,118 @@
+{
+  "bot": {
+    "activity": {
+      "name": "guests!",
+      "type": "LISTENING"
+    },
+    "verification": {
+      "timeout": 300000,
+      "messageDeleteDelay": 20000,
+      "emojiAmount": 10
+    }
+  },
+  "roblox": {
+    "groupIds": [15511384, 15530308, 1057779, 15549895, 15549920, 15549890],
+    "ranks": {
+      "15511384": {
+        "254": "[CM]",
+        "26": "[CW]",
+        "25": "[P]",
+        "24": "[VP]",
+        "23": "[E]",
+        "22": "[ED]",
+        "21": "[BOD]",
+        "20": "[GM]",
+        "19": "[AGM]",
+        "18": "[M]",
+        "17": "[AM]",
+        "16": "[S]",
+        "15": "[AS]",
+        "14": "[SS]"
+      },
+      "15530308": {
+        "9": "[Coord]",
+        "8": "[SRR]",
+        "7": "[RR]",
+        "6": "[JRR]",
+        "5": "[STR]",
+        "4": "[TR]",
+        "3": "[JTR]",
+        "2": "[Trainee]"
+      },
+      "1057779": {
+        "9": "[Coord]",
+        "8": "[CSO]",
+        "7": "[SO]",
+        "6": "[JSO]",
+        "5": "[CSG]",
+        "4": "[SG]",
+        "3": "[JSG]",
+        "2": "[Trainee]"
+      },
+      "15549895": {
+        "9": "[Coord]",
+        "8": "[SCE]",
+        "7": "[CE]",
+        "6": "[JCE]",
+        "5": "[SR]",
+        "4": "[R]",
+        "3": "[JR]",
+        "2": "[Trainee]"
+      },
+      "15549920": {
+        "9": "[Coord]",
+        "8": "[SCF]",
+        "7": "[CF]",
+        "6": "[JCF]",
+        "5": "[SB]",
+        "4": "[B]",
+        "3": "[JB]",
+        "2": "[Trainee]"
+      },
+      "15549890": {
+        "9": "[Coord]",
+        "8": "[SH]",
+        "7": "[H]",
+        "6": "[JH]",
+        "5": "[SC]",
+        "4": "[C]",
+        "3": "[JC]",
+        "2": "[Trainee]"
+      }
+    }
+  },
+  "discord": {
+    "guilds": {
+      "1002257852641050736": {
+        "departments": {
+          "15530308": "1002261236056068126",
+          "1057779": "1002261418151776256",
+          "15549895": "1002261451660079155",
+          "15549920": "1002261471155204267",
+          "15549890": "1002261487466840165"
+        }
+      }
+    },
+    "defaultRoles": [
+      "Chairman", "Chairwoman", "President", "Vice President", "Engineers", 
+      "Executive Director", "Board of Directors", "General Manager", 
+      "Assistant General Manager", "Manager", "Assistant Manager", 
+      "Supervisor", "Assistant Supervisor", "Support Staff", "Security", 
+      "Concierge", "Receptionist", "Chef", "Barista", "Housekeeper", 
+      "Custodian", "Trainee", "Ally Ambassador", "Honored Staff", 
+      "Respected Guest", "Suspended", "Resident", "Guest"
+    ],
+    "roleNames": {
+      "verified": "Verified",
+      "unverified": "Unverified"
+    }
+  },
+  "rateLimit": {
+    "reservoir": 200,
+    "reservoirRefreshAmount": 200,
+    "reservoirRefreshInterval": 60000,
+    "maxConcurrent": 1,
+    "minTime": 333
+  },
+  "emojis": ["🚤", "🛶", "⛵", "🚊", "🚝", "🚈", "🚇", "🚡", "🚎", "🚐", "🚕", "🚗", "🚌", "🚑", "🚲", "💺"]
+}
