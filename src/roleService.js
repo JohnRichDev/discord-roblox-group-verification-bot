@@ -134,8 +134,8 @@ class RoleService {
       
       if (await databaseService.isUserConnected(member.id)) {
         if (verifiedRole) member.roles.add(verifiedRole);
-      } else {
-        if (unverifiedRole) member.roles.add(unverifiedRole);
+      } else if (unverifiedRole) {
+        member.roles.add(unverifiedRole);
       }
     }
   }
