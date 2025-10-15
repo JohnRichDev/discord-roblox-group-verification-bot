@@ -69,7 +69,7 @@ class RobloxService {
 
   getRankPrefix(groupId, rank) {
     const groupRanks = config.roblox.ranks[groupId.toString()];
-    if (groupRanks && groupRanks[rank.toString()]) {
+    if (groupRanks?.[rank.toString()]) {
       return groupRanks[rank.toString()];
     }
     return null;

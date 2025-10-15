@@ -65,7 +65,7 @@ class RoleService {
 
   addDepartmentRole(guild, group, role, toAdd) {
     const guildConfig = config.discord.guilds[guild.id];
-    if (!guildConfig || !guildConfig.departments) return;
+    if (!guildConfig?.departments) return;
 
     const departmentRoleId = guildConfig.departments[group.id.toString()];
     if (!departmentRoleId) return;

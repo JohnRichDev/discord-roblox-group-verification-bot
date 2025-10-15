@@ -11,7 +11,7 @@ function generateRandomEmojis(amount = config.bot.verification.emojiAmount) {
 
 function deleteMessageAfterDelay(message, delay = config.bot.verification.messageDeleteDelay) {
   setTimeout(() => {
-    if (message && message.delete) {
+    if (message?.delete) {
       message.delete().catch(console.error);
     }
   }, delay);
