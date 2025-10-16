@@ -66,4 +66,13 @@ process.on('SIGTERM', () => {
   process.exit(0);
 });
 
-client.login(process.env.TOKEN);
+const token = process.env.TOKEN;
+if (!token) {
+  console.error('Discord bot token not found. Please set TOKEN in your environment or in a .env file.');
+  process.exit(1);
+}
+
+client.login(token).catch(err => {
+  console.error('Failed to login to Discord:', err?.message || err);
+  process.exit(1);
+});
