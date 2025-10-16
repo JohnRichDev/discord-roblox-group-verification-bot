@@ -1,5 +1,5 @@
-const axios = require('axios').default;
-const Bottleneck = require("bottleneck/es5");
+const axios = require('axios');
+const Bottleneck = require('bottleneck');
 const config = require('../config.json');
 
 const limiter = new Bottleneck({
